@@ -1,0 +1,103 @@
+<html>
+  <head>
+    <style>
+      .intestazione {
+         background-color: lightgray;
+      }
+      .anagrafica {
+        border: 1px solid black;
+      }
+      .mappa {
+        background-color: lightgray;
+      }
+      #mappa {
+        display: none;
+      }
+      .lavoro {
+        background-color: lightgray;
+        padding-bottom: 40px;
+      }
+      .esperienza1 {
+        background-color: white;
+        width: 250px;
+        padding: 15px;
+      }
+      .posizioni {
+        display: flex;
+        justify-content: space-evenly;
+      }
+
+     .loghi {
+     display: flex;
+     justify-content: space-evenly;
+     }
+
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+  <body>
+      <header class="intestazione">
+        <h1>Matteo Giordanelli</h1>
+        <p>Studente</p>
+        <marquee>Quello che volete</marquee>
+      </header>
+      <main>
+        <ul class="anagrafica">
+          <b>Anagrafica</b>
+          <li>Data di nascita: 21/03/2003</li>
+          <li>Luogo di nascita: Milano</li>
+          <li>Residenza: Milano</li>
+        </ul>
+
+        <div class="lavoro">
+          <h4>Esperienze lavorative</h4>
+          <div class="posizioni">
+            <a href="https://www.syntaxsc.it/contatti.php" target="_blank">
+             <div class="esperienza1">
+              <h5>Tecnico informatico</h5>
+              <p><i>SINTAX</i>
+              <br>2021</p>
+             </div>
+            </a>
+
+            <div class="esperienza1">
+                <i class="fa fa-laptop" aria-hidden="true"></i>
+              <h5>Tecnico informatico</h5>
+              <p><i>GlobalPoint Service</i>
+              <br>2022</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="mappa">
+          <h4 onclick="mappaAppare()">Mappa</h4>
+          <div id="mappa">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d616.1258541001444!2d9.224492159488259!3d45.521638710044385!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sit!2sit!4v1674637054031!5m2!1sit!2sit" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+        </div>
+
+      </main>
+      <footer>
+        <div class="loghi">
+           <i class="fa fa-instagram" aria-hidden="true"></i>
+           <i class="fa fa-envelope-o" aria-hidden="true"></i>
+           <i class="fa fa-phone" aria-hidden="true"></i>
+        </div>
+      </footer>
+    
+
+    <script>
+      var a = 0;
+      function mappaAppare() {
+        if (a == 0) {
+          document.getElementById("mappa").style.display = "flex";
+          a = 1;
+        }
+        else if (a == 1) {
+          document.getElementById("mappa").style.display = "none";
+          a = 0;
+        }
+      }
+    </script>
+  </body>
+</html>
